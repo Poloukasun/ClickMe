@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>IP Address</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://js.bugfender.com/bugfender-v2.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <table border=1 cellpadding=5>
+        <tr>
+            <td>IP Address</td>
+            <td id="ip"></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td id="country"></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td id="city"></td>
+        </tr>
+        <tr>
+            <td>Google Maps</td>
+            <td>
+                <iframe src="" id="gmaps" width="400" height="400"></iframe>
+            </td>
+        </tr>
+    </table>
+    <pre id="pre">This isn't showing your current location, but you're FUTURE location</pre>
+    <!-- For those who read that, i'm just fucking dumb and my web server isn't in https
+        so I can't use navigator.geolocation.getCurrentPosition(), and all those free
+        service sucks at getting the good location
+        btw probably no one will ever see this message -->
+</body>
+<style>
+    body {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+
+</html>
